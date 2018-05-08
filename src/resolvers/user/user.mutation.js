@@ -1,10 +1,8 @@
+import { getUserById , addUsers , getUsers} from '../../data/user.data'
+
 export default { 
     createUser(root,{createUserInput}) {
-        return {
-            firstName:createUserInput.firstName,
-            lastName:createUserInput.lastName,
-            fullName: createUserInput.firstName + " " +createUserInput.lastName,
-            email:createUserInput.email
-        }
+        const user = addUsers(createUserInput)
+        return user
     }
 }

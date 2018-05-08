@@ -1,4 +1,4 @@
-export default [{
+const users = [{
     id:1,
     firstName:"Cherprang",
     lastName:"Areekul",
@@ -11,3 +11,17 @@ export default [{
     fullName: "Praewa Suthamphong",
     email:"Praewa@bnk.com",
 }]
+
+export const getUsers = ()=>{
+    return users
+}
+
+export const addUsers = (user)=>{
+    user.fullName = user.firstName + " " + user.lastName
+    users.push(user)
+    return user
+}
+
+export const getUserById = (id)=>{
+    return users.filter(user=>user.id===id)[0]
+}
