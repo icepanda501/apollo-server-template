@@ -1,0 +1,18 @@
+type User {
+    id:Int
+    firstName:String
+    lastName:String
+    fullName:String
+    email:String
+    company:Company
+}
+input CreateUserInput {
+    firstName: String
+    lastName: String
+    email: String
+}
+
+extend type Query {
+    users: [User]
+    user: User
+}
