@@ -14,9 +14,6 @@ const app = express()
 
 const resolvers = {
     Query: {
-        something(){
-            return "somedata"
-        },
         ...userQuery,
         ...companyQuery
     },
