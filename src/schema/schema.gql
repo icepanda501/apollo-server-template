@@ -13,12 +13,19 @@
     company:Company
   }
   input CreateUserInput {
+    id: Int
     firstName: String
     lastName: String
     email: String
   }
+  input CreateCompanyInput {
+    id: Int
+    name: String
+    userId: [Int]
+  }
   type Mutation {
     createUser(createUserInput: CreateUserInput) : User
+    createCompany(createCompanyInput: CreateCompanyInput) : Company
   }
   type Query {
     something: String

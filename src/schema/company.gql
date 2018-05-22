@@ -1,9 +1,0 @@
-type Company {
-    id:Int
-    name:String
-    users:[User]
-  }
-
-extend type Query {
-  companies: [Company]
-}

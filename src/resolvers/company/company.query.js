@@ -1,7 +1,7 @@
-import companyData from '../../data/company.data'
+import { getCompany } from '../../data/company.data'
 
 export default {
     companies(){
-        return companies
+        return getCompany()
     }
 }

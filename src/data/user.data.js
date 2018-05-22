@@ -10,7 +10,15 @@ const users = [{
     lastName:"Suthamphong",
     fullName: "Praewa Suthamphong",
     email:"Praewa@bnk.com",
+},{
+    id:3,
+    firstName:"Chadatan",
+    lastName:"Dankul",
+    fullName: "Chadatan Dankul",
+    email:"Chadatan@sweat.com",
 }]
+
+
 
 export const getUsers = ()=>{
     return users

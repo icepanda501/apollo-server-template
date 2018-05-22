@@ -1,7 +1,7 @@
-import userData from '../../data/user.data'
+import { getUsers , getUserById} from '../../data/user.data'
 
 export default {
-    users(){
-        return userData[0]
+    users(company){
+        return company.userId.map(userId=> getUserById(userId))  
     }
 }
