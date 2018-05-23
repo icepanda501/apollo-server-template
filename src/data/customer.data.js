@@ -31,5 +31,5 @@ export const getCustomerById = (id)=>{
 
 export const addCustomers = (Customer)=>{
     Customers.push(Customer)
-    return Customers
+    return Customer
 }

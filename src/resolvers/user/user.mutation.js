@@ -1,4 +1,4 @@
-import { getUserById , addUsers , getUsers} from '../../data/user.data'
+import { addUsers} from '../../data/user.data'
 
 export default { 
     createUser(root,{createUserInput}) {

@@ -1,8 +1,9 @@
 import {addCustomers} from '../../data/customer.data'
 
 export default { 
-    createUser(root,{createUserInput}) {
-        const Customer = addCustomers(createUserInput)
+    createCustomer(root,{createCustomerInput}) {
+        const Customer = addCustomers(createCustomerInput)
+        console.log(Customer)
         return Customer
     }
 }
