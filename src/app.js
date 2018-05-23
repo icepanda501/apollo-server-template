@@ -5,6 +5,10 @@ import express from 'express'
 
 import typeDefs from './schema'
 
+import Customer from './resolvers/customer/customer.field'
+import CustomerMutation from './resolvers/customer/customer.mutation'
+import CustomerQuery from './resolvers/customer/customer.query'
+
 import Company from './resolvers/company/company.field'
 import companyMutation from './resolvers/company/company.mutation'
 import companyQuery from './resolvers/company/company.query'
@@ -17,7 +21,7 @@ import cors from 'cors'
 
 
 const app = express()
-const PORT = 8880
+const PORT = 8881
 
 
 app.use(cors())
@@ -25,14 +29,17 @@ app.use(cors())
 const resolvers = {
     Query: {
         ...userQuery,
-        ...companyQuery
+        ...companyQuery,
+        ...CustomerQuery,
     },
     Mutation: {
         ...userMutation,
-        ...companyMutation
+        ...companyMutation,
+        ...CustomerMutation,
     },
     Company: Company,
-    User: User
+    User: User,
+    Customer: Customer,
 }
 
 const schema = makeExecutableSchema({

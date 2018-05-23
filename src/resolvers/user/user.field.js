@@ -1,7 +1,12 @@
-import companyData from '../../data/company.data'
+import {getCompanyById} from '../../data/company.data'
 
 export default {
-    company(){
-        return companyData[0]
+    company(aaa){
+        return getCompanyById(aaa)
+    },
+    eao(aaa){
+        console.log(aaa)
+        return "eao"
     }
+    
 }

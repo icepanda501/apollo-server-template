@@ -1,4 +1,12 @@
-  
+  type Customer {
+    id:Int
+    firstName:String
+    lastName:String
+    fullName:String
+    email:String
+    website:String
+  }
+
   type Company {
     id:Int
     name:String
@@ -10,8 +18,19 @@
     lastName:String
     fullName:String
     email:String
-    company:Company
+    company:[Company]
+    eao:String
   }
+
+  input CreateCustomerInput {
+    id:Int
+    firstName:String
+    lastName:String
+    fullName:String
+    email:String
+    website:String
+  }
+
   input CreateUserInput {
     id: Int
     firstName: String
@@ -25,13 +44,16 @@
   }
   type Mutation {
     createUser(createUserInput: CreateUserInput) : User
+    createCustomer(createCustomerInput: CreateCustomerInput) : Customer
     createCompany(createCompanyInput: CreateCompanyInput) : Company
   }
   type Query {
     something: String
     user(id: Int) : User
-    users : [User]
+    users: [User]
     companies: [Company]
+    Customers:[Customer]
+    Customer(id: Int) : Customer
   }
   schema {
     query: Query
