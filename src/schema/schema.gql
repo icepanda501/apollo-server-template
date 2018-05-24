@@ -52,8 +52,8 @@
     user(id: Int) : User
     users: [User]
     companies: [Company]
-    Customers:[Customer]
-    Customer(id: Int) : Customer
+    customers:[Customer]
+    customer(id: Int) : Customer
   }
   schema {
     query: Query

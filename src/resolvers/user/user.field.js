@@ -1,12 +1,8 @@
 import {getCompanyById} from '../../data/company.data'
 
 export default {
-    company(aaa){
-        return getCompanyById(aaa)
-    },
-    eao(aaa){
-        console.log(aaa)
-        return "eao"
+    company(object){
+        return getCompanyById(object.id)
     }
     
 }

@@ -18,18 +18,10 @@ export const addCompany = (company)=>{
     return company
 }
 
-export const getCompanyById =(aaa)=>{
-
+export const getCompanyById =(id)=>{
     const checkcompany = (value) => {
-        console.log("aaa.id",aaa.id)
-        if(value.userId.indexOf(aaa.id)>=0){
-          return true;
-        }
-        return false;
-      }
-      
-      
-      const result = companies.filter(checkcompany);
-      console.log(result)
+        return value.userId.indexOf(id)>=0
+    }
+      const result = companies.filter(checkcompany);     
     return result
 }

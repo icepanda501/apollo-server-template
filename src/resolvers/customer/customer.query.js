@@ -1,10 +1,10 @@
 import {getCustomer, getCustomerById}  from '../../data/customer.data'
 
 export default{       
-    Customer(root,{id}){
+    customer(root,{id}){
         return getCustomerById(id)
     },
-    Customers(){
+    customers(){
         return getCustomer()
     },
     
