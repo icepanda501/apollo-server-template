@@ -33,3 +33,9 @@ export const addCustomers = (Customer)=>{
     Customers.push(Customer)
     return Customer
 }
+
+export const companyGetCustomerById = (id)=>{
+    const result = Customers.filter(Customers=>Customers.id===id)
+    return result.length > 0 ? result[0] : {}
+}
+

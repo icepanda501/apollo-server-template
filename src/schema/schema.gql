@@ -5,12 +5,14 @@
     fullName:String
     email:String
     website:String
+    company:[Company]
   }
 
   type Company {
     id:Int
     name:String
-    users:[User]
+    users:[User]    
+    customers:[Customer]
   }
   type User {
     id:Int
