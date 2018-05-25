@@ -57,7 +57,11 @@
     customers:[Customer]
     customer(id: Int) : Customer
   }
+  type Subscription {
+    customerSubscription:Customer
+  }
   schema {
     query: Query
     mutation: Mutation
+    subscription: Subscription
   }
