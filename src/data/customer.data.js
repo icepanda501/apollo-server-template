@@ -1,3 +1,5 @@
+let id = 4
+
 const Customers = [{
     id:1,
     firstName:"jordan",
@@ -30,6 +32,7 @@ export const getCustomerById = (id)=>{
 }
 
 export const addCustomers = (Customer)=>{
+    Customer.id = id++
     Customers.push(Customer)
     return Customer
 }

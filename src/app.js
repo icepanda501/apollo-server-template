@@ -20,6 +20,7 @@ import companyQuery from './resolvers/company/company.query'
 import User from './resolvers/user/user.field'
 import userMutation from './resolvers/user/user.mutation'
 import userQuery from './resolvers/user/user.query'
+import userSubscription from './resolvers/user/user.subscription'
 
 import cors from 'cors'
 
@@ -37,6 +38,7 @@ websocketServer.listen(port_websocket, () => console.log(
 
 app.use(cors())
 
+
 const resolvers = {
     Query: {
         ...userQuery,
@@ -50,6 +52,7 @@ const resolvers = {
     },
     Subscription: {
         ...customerSubscription,
+        ...userSubscription,
     },
     Company: Company,
     User: User,

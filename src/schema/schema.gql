@@ -58,7 +58,9 @@
     customer(id: Int) : Customer
   }
   type Subscription {
-    customerSubscription:Customer
+    customerSubscription: Customer
+    userSubscription: User
+    
   }
   schema {
     query: Query
